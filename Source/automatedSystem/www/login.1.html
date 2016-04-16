@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Login Page</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/app5.js"></script>
+  </head>
+  <body ng-app="myApp">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable" align="center">
+        <div class="navbar-header navbar-left">
+					<h1><a href="login.html"><img src="images/logo.png" alt="">Login</a></h1>
+				</div>
+      </ion-header-bar>
+      <ion-content class="padding" ng-controller="RegisterController">
+        <style>
+          #example1 {
+              border: 10px solid black;
+              padding: 35px;
+              
+          }
+          </style>
+                     
+          <div class="list">
+
+            </br><label class="item item-input item-select">
+              <div class="input-label">
+                Type
+              </div>
+              <select id="loginType">
+                <option value="doc">Doctor</option>
+                <option value="pat" selected>Patient</option>
+                <option value="admin">Administrator</option>
+                <option value="diagadmin">DiagnosticAdministrator</option>
+              </select>
+            </label>
+
+          </div>
+          <div id="example1" align ="center">
+          <!--<select id="loginType">
+            <option value="doctor">doctor</option>
+            <option value="patient">patient</option>
+            <option value="admin">admin</option>
+            <option value="diagnostic center admin">diagnostic center admin</option>
+          </select>-->
+
+          <form name="loginForm" action="redirect.html">
+            <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="UserName" id="userName" ng-model="userName">
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="Password" id="password" ng-model="password">
+            </label>
+            </div>
+            <div class="button-bar">
+              <input type="submit" class="button button-dark" value="Login" ng-click="loginUser(userName,password)">
+              <input type="reset" class="button button-dark" value="Reset">
+            </div>
+            
+          </form>
+            <div class="button-bar">
+              <a class="button button-dark" href="index.html">Home</a>
+            </div>
+            
+
+          <!--<center>
+            <form action="02 Create-Reset Password.html">
+              <input type="submit" value="Order New Test">
+            </form>
+          </center>-->
+
+          <p><a href="02 Create-Reset Password.html">Create or Reset Password</a></p>
+          </div>
+      
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

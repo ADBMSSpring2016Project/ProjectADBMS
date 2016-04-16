@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-pane>
+      <ion-header-bar class="bar-stable" align="center">
+        <div class="navbar-header navbar-left">
+					<h1><a href="order.html">Order a Test</a></h1>
+				</div>
+      </ion-header-bar>
+      <ion-content>
+        <form>
+            <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="Patient ID" id="patientId">
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="First Name" id="firstName">
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="Last Name" id="lastName">
+            </label>
+            </div>
+            
+            <div class="list">
+
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Type of Test:
+                </div>
+                <select id="testType">
+                  <option selected>X-ray</option>
+                  <option>Ultrasonography</option>
+                  <option>Computed Tomography</option>
+                  <option>Magnetic Resonance Imaging</option>
+                </select>
+              </label>
+            </div>
+            
+            <form action="main.html">
+              <div class="list">
+              <label class="item item-input">
+                <input type="text" placeholder="Doctor ID" id="doctorID">
+              </label>
+              </div>
+              <div class="button-bar">
+                <input type="submit" class="button button-dark" value="Order Test" onclick="alert('ORDER IS SUCCESSFULL')">
+              </div>
+              
+            </form>
+        </form>
+      </ion-content>
+      <div class="tabs tabs-icon-top">
+        <a class="tab-item" href="main.html">
+          <i class="icon ion-home"></i>
+          Home
+        </a>
+        <a class="tab-item" href="order.html">
+          <i class="icon ion-star"></i>
+          Order a Test
+        </a>
+        <a class="tab-item" href="index.html">
+          <i class="icon ion-power"></i>
+          Logout
+        </a>
+      </div>
+    </ion-pane>
+  </body>
+</html>
